@@ -1,4 +1,26 @@
 .affichage {
+  background-color: black;
+  color:lime;
+  border-radius: 7px;
+  border: none;
   text-align: right;
   width: 100%;
-  font-size: 5em; }
+  font-size: 4em;
+ }
+
+.dell{
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(162, 162, 200);
+  color:white;
+  border-radius: 5px;
+  font-size:2.5em;
+}
+
+.operateur{
+  display:flex;
+  justify-content: center;
+  border-radius: 5px;
+  align-items: center;
+  background-color: rgb(162, 162, 200);
+}

@@ -8,56 +8,101 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Calculatrice (Bootstrap)</title>
 </head>
 
 <body>
     <article class="container">
         <section class="row">
-            <div class="col-12 d-flex justify-content-center mt-5 mb-5 shadow-lg">
-                <h1>Calculatrice</h1>
+            <div class="col-12 d-flex justify-content-center m-3">
+                <h1>Calculatrice (Bootstrap et Javascript)</h1>
             </div>
         </section>
         <section class="row">
-            <div class="col-12 mb-5">
+            <div class="col-12 mb-3">
                 <input id="show" class="affichage" type="text" size="32">
             </div>
         </section>
 
         <section class="row">
-            <div id="7" class="col-3 btn btn-secondary border border-dark" value="9" onclick="affichage(this);"><a href="#"><img src="/img/7.png" alt=""></a> </div>
-            <div id="8" class="col-3  btn btn-secondary border border-dark" value="8" onclick="affichage(this);"><a href="#"><img src="/img/8.png" alt=""></a></div>
-            <div id="9" class="col-3  btn btn-secondary border border-dark" value="9" onclick="affichage(this);"><a href="#"><img src="/img/9.png" alt=""></a></div>
-            <div id="div" class="col-3  btn btn-success border border-dark" value="div" onclick="affichage(this);"><a href="#"><img src="/img/div.png" alt=""></a></div>
+            <div id="CE" class="dell col-3 offset-9 border border-dark">CE</div>
         </section>
 
         <section class="row">
-            <div id="4" class="col-3  btn btn-secondary border border-dark" value="4" onclick="affichage(this);"><a href="#"><img src="/img/4.png" alt=""></a></div>
-            <div id="5" class="col-3 btn btn-secondary border border-dark" value="5" onclick="affichage(this);"><a href="#"><img src="/img/5.png" alt=""></a></div>
-            <div id="6" class="col-3  btn btn-secondary border border-dark" value="6" onclick="affichage(this);"><a href="#"><img src="/img/6.png" alt=""></a></div>
-            <div id="x" class="col-3  btn btn-success border border-dark" value="*" onclick="affichage(this);"><a href="#"><img src="/img/x.png" alt=""></a></div>
+            <div id="7" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/7.png"
+                        alt=""></a></div>
+            <div id="8" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/8.png"
+                        alt=""></a></div>
+            <div id="9" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/9.png"
+                        alt=""></a></div>
+            <div id="/" class="operation operateur col-3 border border-dark"><a href="#"><img src="./img/div.png" alt=""></a></div>
         </section>
 
         <section class="row">
-            <div id="1" class="col-3  btn btn-secondary border border-dark" value="1" onclick="affichage(this);"><a href="#"><img src="/img/1.png" alt=""></a></div>
-            <div id="2" class="col-3  btn btn-secondary border border-dark" value="2" onclick="affichage(this);"><a href="#"><img src="/img/2.png" alt=""></a></div>
-            <div id="3" class="col-3  btn btn-secondary border border-dark" value="3" onclick="affichage(this);"><a href="#"><img src="/img/3.png" alt=""></a></div>
-            <div id="-" class="col-3  btn btn-success border border-dark" value="-" onclick="affichage(this);"><a href="#"><img src="/img/-.png" alt=""></a></div>
+            <div id="4" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/4.png"
+                        alt=""></a></div>
+            <div id="5" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/5.png"
+                        alt=""></a></div>
+            <div id="6" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/6.png"
+                        alt=""></a></div>
+            <div id="*" class="operation operateur col-3 border border-dark"><a href="#"><img src="./img/x.png"
+                        alt=""></a></div>
         </section>
 
         <section class="row">
-            <div id="0" class="col-3 offset-3  btn btn-secondary border border-dark" value="0" onclick="affichage(this);"><a href="#"><img src="/img/0.png" alt=""></a></div>
-            <div id="," class="col-3 btn btn-success border border-dark" value="," onclick="affichage(this);"><a href="#"><img src="/img/,.png" alt=""></a></div>
-            <div id="+" class="col-3 btn btn-success border border-dark" value="+" onclick="affichage(this);"><a href="#"><img src="/img/+.png" alt=""></a></div>
+            <div id="1" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/1.png"
+                        alt=""></a></div>
+            <div id="2" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/2.png"
+                        alt=""></a></div>
+            <div id="3" class="operation col-3 btn btn-secondary border border-dark"><a href="#"><img src="./img/3.png"
+                        alt=""></a></div>
+            <div id="-" class="operation operateur col-3 border border-dark"><a href="#"><img src="./img/-.png"
+                        alt=""></a></div>
         </section>
 
         <section class="row">
-            <div id="=" class="col-6 offset-6 btn btn-warning border border-dark" value="=" onclick="affichage(this);"><a href="#"><img src="/img/=.png" alt=""></a></div>
+            <div id="0" class="operation col-3 offset-3  btn btn-secondary border border-dark"><a href="#"><img
+                        src="./img/0.png" alt=""></a></div>
+            <div id="." class="operation operateur col-3 border border-dark"><a href="#"><img src="./img/,.png"
+                        alt=""></a></div>
+            <div id="+" class="operation operateur col-3 border border-dark"><a href="#"><img src="./img/+.png"
+                        alt=""></a></div>
+        </section>
+
+        <section class="row">
+            <div id="egal" class="col-6 offset-6 btn btn-danger border border-dark"><a href="#"><img src="./img/=.png"
+                        alt=""></a></div>
         </section>
 
     </article>
 
-    <script scr="./calcule.js"></script>
+    <script>
+        var calcul = "";
+        let $erase = document.getElementById('CE');
+        let $result = document.getElementById('egal');
+        let $input = document.getElementById('show');
+        const chiffres = document.querySelectorAll(".operation");
+
+        for (let chiffre of chiffres) {
+            chiffre.addEventListener('click', function () {
+                calcul += chiffre.id;
+                affCalcul(calcul);
+            });
+        }
+        $result.addEventListener('click', function () {
+            affCalcul(eval(calcul));
+            calcul = "";
+        });
+        $erase.addEventListener('click', function () {
+            calcul = "";
+            affCalcul(calcul);
+        });
+
+        function affCalcul(value) {
+            $input.setAttribute('value', value);
+        }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
